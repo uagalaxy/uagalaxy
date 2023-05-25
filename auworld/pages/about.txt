@@ -4,7 +4,7 @@
       <header class="in-pu in-pua">
         <!-- here’s the avatar -->
         <a href="#">
-          <img title="auworld" src="auworld/img/au.png" class="hoverZoomLink image" alt="image of auworld">
+          <img title="auworld" src="../auworld/img/au.png" class="hoverZoomLink image" alt="image of auworld">
         </a>
         <!-- the username -->
         <h1>uagalaxy</h1>
@@ -67,7 +67,7 @@
             <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=ms dhoni">more</a>
           </span>
           <span class="favs-img-holder">
-            <img alt="ms dhoni" class="favs-img image" onclick="imageBig(this)" src="auworld/images/mahi.jpeg">
+            <img alt="ms dhoni" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/mahi.jpeg">
           </span>
         </div><div class="favs-item" li-index="2">
           <span class="favs-detail">
@@ -76,7 +76,7 @@
             <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=minions">more</a>
           </span>
           <span class="favs-img-holder">
-            <img alt="minions" class="favs-img image" onclick="imageBig(this)" src="auworld/images/minions.jpg">
+            <img alt="minions" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/minions.jpg">
           </span>
         </div><div class="favs-item" li-index="3">
           <span class="favs-detail">
@@ -85,7 +85,7 @@
             <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=dilip joshi">more</a>
           </span>
           <span class="favs-img-holder">
-            <img alt="dilip joshi" class="favs-img image" onclick="imageBig(this)" src="auworld/images/dilip-sir.jpeg">
+            <img alt="dilip joshi" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/dilip-sir.jpeg">
           </span>
         </div><div class="favs-item" li-index="4">
           <span class="favs-detail">
@@ -94,7 +94,7 @@
             <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=hrithik roshan">more</a>
           </span>
           <span class="favs-img-holder">
-            <img alt="hrithik roshan" class="favs-img image" onclick="imageBig(this)" src="auworld/images/hritik.jpeg">
+            <img alt="hrithik roshan" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/hritik.jpeg">
           </span>
         </div><div class="favs-item" li-index="5">
           <span class="favs-detail">
@@ -103,7 +103,7 @@
             <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=ravindra jadeja">more</a>
           </span>
           <span class="favs-img-holder">
-            <img alt="ravindra jadeja" class="favs-img image" onclick="imageBig(this)" src="auworld/images/jadeja.jpeg">
+            <img alt="ravindra jadeja" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/jadeja.jpeg">
           </span>
         </div></div>
       </div>
