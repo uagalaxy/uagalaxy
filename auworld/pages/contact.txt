@@ -1,0 +1,58 @@
+<div class="contact">
+  <form class="contact-fm" action="https://formsubmit.co/c133e40e14339e711bb386f7bed75d5c" method="POST">
+    <input type="hidden" name="_next" value="https://auworld.netlify.app/AUworlD/page/thankyou.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="kauno ke msg">
+    <p class="contact-detail">please fill correct information<br>*your message will directly deliver to me.</p>
+    <input id="name" class="contact-form name" name="name" type="text" placeholder="name please">
+    <input id="social" class="contact-form form-user" placeholder="1st select platform" type="text">
+    <select id="contactoption" class="contact-form-user-select" title="select platform">
+      <option selected="" value="1st select platform">select platform</option>
+      <option value="email ID">email</option>
+      <option value="instagram Username">instagram</option>
+      <option value="twitter Username">twitter</option>
+      <option value="whatsapp No.">whatsapp</option>
+      <option value="facebook Username">facebook</option>
+    </select>
+    <textarea id="message" class="contact-form text" name="message of the user" type="text" placeholder="your message"></textarea>
+    <input type="submit" placeholder="submit" onclick="checkInputs()" class="contact-form-submit" id="au_massagesubmit">
+  </form>
+  <div class="social-massenger">
+    <p class="smss">or message me through social media</p>
+    <ul class="social-massenger-links">
+      <li class="prolink">
+        <a style="background:radial-gradient(circle at top right, red,crimson);" data-link="" href="mailto:maakasamindian@gmail.com?subject=user%20from%20maakasamindian&amp;body=hello%20i%20am%20">
+          <svg width="40" height="40" viewBox="0 0 512 512">
+            <path d="M424,80H88a56.06,56.06,0,0,0-56,56V376a56.06,56.06,0,0,0,56,56H424a56.06,56.06,0,0,0,56-56V136A56.06,56.06,0,0,0,424,80Zm-14.18,92.63-144,112a16,16,0,0,1-19.64,0l-144-112a16,16,0,1,1,19.64-25.26L256,251.73,390.18,147.37a16,16,0,0,1,19.64,25.26Z"></path>
+          </svg>
+        </a>
+      </li>
+      <li class="prolink">
+        <a style="background:radial-gradient(circle at top right, rgb(255, 0, 128),blue);" href="https://m.me/uagalaxy">
+          <svg viewBox="0 0 24 24" width="40" height="40">
+            <path d="M 12 2 C 6.486 2 2 6.262 2 11.5 C 2 14.045 3.088 16.487484 5 18.271484 L 5 22.617188 L 9.0800781 20.578125 C 10.039078 20.857125 11.02 21 12 21 C 17.514 21 22 16.738 22 11.5 C 22 6.262 17.514 2 12 2 z M 12 4 C 16.411 4 20 7.365 20 11.5 C 20 15.635 16.411 19 12 19 C 11.211 19 10.415672 18.884203 9.6386719 18.658203 L 8.8867188 18.439453 L 8.1855469 18.789062 L 7 19.382812 L 7 18.271484 L 7 17.402344 L 6.3632812 16.810547 C 4.8612813 15.408547 4 13.472 4 11.5 C 4 7.365 7.589 4 12 4 z M 11 9 L 6 14 L 10.5 12 L 13 14 L 18 9 L 13.5 11 L 11 9 z"></path>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <script>
+    const contactSelect = document.querySelector(".form-user"),
+      contactuserselect = document.querySelectorAll(".contact-form-user-select");
+    contactuserselect.forEach(bgs => {
+      window.addEventListener("click", function (e) {
+        let platform = bgs.value;
+        contactSelect.setAttribute("placeholder", platform);
+        contactSelect.setAttribute("name", platform);
+      });
+    });
+    document.title = "contact | uagalaxy";
+    document.querySelector(".contact-form.name").onkeyup = function () {
+      document.getElementById('au_massagesubmit').removeAttribute("disabled")
+    }
+    document.querySelector(".contact-form.text").onkeyup = function () {
+      document.getElementById('au_massagesubmit').removeAttribute("disabled")
+    }
+
+  </script>
+</div>

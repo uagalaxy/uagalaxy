@@ -1,0 +1,60 @@
+@media screen and (max-width: 400px) {
+    
+    .hide-in-mobile{
+        display: none;
+    }
+    .hs-features{
+        justify-content: space-between;
+    }
+    .f1_ab.close.show{
+        margin-left: calc(100% / 4) !important;
+    } 
+}
+
+@media (max-width:768px) and (min-width:425px) {
+    .home-main {
+    display: flex;
+    background: white;
+    height: 90vh;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+}
+
+@media (max-width:610px)  and (min-width:400px){
+   .welcome{
+       background: url(/auworld/img/mlfb.jpg);
+        background-size: 100%;
+        padding-top: 600px;
+    }
+    .hide-in-pc{
+        display: none
+    }
+    .hs-feature-1, .hs-feature-3{
+        flex-direction: row-reverse;
+    }
+     .home-main {
+    display: flex;
+    background: white;
+    height: 90vh;
+    max-height: 600px;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+}
+@media screen and (min-width: 610px) {
+    .home-main {
+    align-items: center;
+    justify-content: space-around;
+}
+ .hs-feature-1, .hs-feature-3{
+        flex-direction: row-reverse;
+    }
+}

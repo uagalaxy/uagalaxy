@@ -1,0 +1,112 @@
+<div class="prrt">
+  <aside class="profile-card profile-card-init">
+    <div style="padding: 0 0 11vh;">
+      <header class="in-pu in-pua">
+        <!-- here’s the avatar -->
+        <a href="#">
+          <img title="auworld" src="auworld/img/au.png" class="hoverZoomLink image" alt="image of auworld">
+        </a>
+        <!-- the username -->
+        <h1>uagalaxy</h1>
+        <!-- and role or location -->
+        <h2 style="margin:0;color:rgb(0, 162, 255);">student</h2>
+      </header>
+      <!-- bit of a bio; who are you? -->
+      <div class="profile-bio in-pu in-pua">
+        <p>
+          " Hello, I'm developer of uagalaxy😋. I'm human, ofcourse from earth😁. I don't like to share my name and
+          pics😌. Sorry for this and if you know who I'm,then keep this secret😜. ...but I'm sharing my social media and
+          some details about me😊"
+        </p>
+      </div>
+      <!-- some social links to show off -->
+      <ul class="profile-social-links in-pu in-pua">
+        <li class="prolink">
+          <a style="background:radial-gradient(circle at top right, orange,crimson,blue);" target="self" href="https://www.instagram.com/uagalaxy">
+            <svg width="40" height="40" viewBox="0 0 512 512">
+              <path d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z">
+              </path>
+              <path d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"></path>
+              <path d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z">
+              </path>
+            </svg>
+          </a>
+        </li>
+        <li class="prolink">
+          <a style="background:radial-gradient(circle at top right, rgb(0, 217, 255),blue);" href="https://www.facebook.com/uagalaxy">
+            <svg width="40" height="40" viewBox="0 0 512 512">
+              <path d="M480,257.35c0-123.7-100.3-224-224-224s-224,100.3-224,224c0,111.8,81.9,204.47,189,221.29V322.12H164.11V257.35H221V208c0-56.13,33.45-87.16,84.61-87.16,24.51,0,50.15,4.38,50.15,4.38v55.13H327.5c-27.81,0-36.51,17.26-36.51,35v42h62.12l-9.92,64.77H291V478.66C398.1,461.85,480,369.18,480,257.35Z" fill-rule="evenodd"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="prolink">
+          <a style="background:radial-gradient(circle at top right, rgb(9, 206, 212),rgb(2 139 254));" href="https://twitter.com/maakasamindian">
+            <svg width="40" height="40" viewBox="0 0 512 512">
+              <path d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z">
+              </path>
+            </svg>
+          </a>
+        </li>
+        <li class="prolink">
+          <a style="background:radial-gradient( #ffffff,#ffffff);" href="https://github.com/maakasamindian">
+            <svg width="40" height="40" viewBox="0 0 512 512">
+              <path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9a17.56,17.56,0,0,0,3.8.4c8.3,0,11.5-6.1,11.5-11.4,0-5.5-.2-19.9-.3-39.1a102.4,102.4,0,0,1-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1,1.4-14.1h.1c22.5,2,34.3,23.8,34.3,23.8,11.2,19.6,26.2,25.1,39.6,25.1a63,63,0,0,0,25.6-6c2-14.8,7.8-24.9,14.2-30.7-49.7-5.8-102-25.5-102-113.5,0-25.1,8.7-45.6,23-61.6-2.3-5.8-10-29.2,2.2-60.8a18.64,18.64,0,0,1,5-.5c8.1,0,26.4,3.1,56.6,24.1a208.21,208.21,0,0,1,112.2,0c30.2-21,48.5-24.1,56.6-24.1a18.64,18.64,0,0,1,5,.5c12.2,31.6,4.5,55,2.2,60.8,14.3,16.1,23,36.6,23,61.6,0,88.2-52.4,107.6-102.3,113.3,8,7.1,15.2,21.1,15.2,42.5,0,30.7-.3,55.5-.3,63,0,5.4,3.1,11.5,11.4,11.5a19.35,19.35,0,0,0,4-.4C415.9,449.2,480,363.1,480,261.7,480,134.9,379.7,32,256,32Z">
+              </path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div style="display: flex;flex-direction: column;align-items: center;">
+        <p style="text-align: center;border-top: 2px solid;padding: 5px;margin: 15px 0 0px;">The most loved people/thing
+          which bring smile on my face</p>
+        <div class="au-favs-item-list">
+        <div class="favs-item" li-index="1">
+          <span class="favs-detail">
+            <p class="favs-title">MS Dhoni😍</p>
+            <p class="favs-about">I love Mahi(Dhoni).He is my all time favourite. He looks so cute, his cuteness, coolness always attract me</p>
+            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=ms dhoni">more</a>
+          </span>
+          <span class="favs-img-holder">
+            <img alt="ms dhoni" class="favs-img image" onclick="imageBig(this)" src="auworld/images/mahi.jpeg">
+          </span>
+        </div><div class="favs-item" li-index="2">
+          <span class="favs-detail">
+            <p class="favs-title">minions😘</p>
+            <p class="favs-about">I love minions. They are awesome, cute, attractive, cool...</p>
+            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=minions">more</a>
+          </span>
+          <span class="favs-img-holder">
+            <img alt="minions" class="favs-img image" onclick="imageBig(this)" src="auworld/images/minions.jpg">
+          </span>
+        </div><div class="favs-item" li-index="3">
+          <span class="favs-detail">
+            <p class="favs-title">Dilip sir😊</p>
+            <p class="favs-about">You Know this legend! This is not only reason of my smile, this legend is whole india's smile</p>
+            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=dilip joshi">more</a>
+          </span>
+          <span class="favs-img-holder">
+            <img alt="dilip joshi" class="favs-img image" onclick="imageBig(this)" src="auworld/images/dilip-sir.jpeg">
+          </span>
+        </div><div class="favs-item" li-index="4">
+          <span class="favs-detail">
+            <p class="favs-title">Hrithik Roshan🤩</p>
+            <p class="favs-about">the handsome one, this person have great personality😍. And the acting is...</p>
+            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=hrithik roshan">more</a>
+          </span>
+          <span class="favs-img-holder">
+            <img alt="hrithik roshan" class="favs-img image" onclick="imageBig(this)" src="auworld/images/hritik.jpeg">
+          </span>
+        </div><div class="favs-item" li-index="5">
+          <span class="favs-detail">
+            <p class="favs-title">sir jadeja😋</p>
+            <p class="favs-about">the handsome, sir ravindra jadeja always impress me by his tough catches for team. and the look he have😍</p>
+            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=ravindra jadeja">more</a>
+          </span>
+          <span class="favs-img-holder">
+            <img alt="ravindra jadeja" class="favs-img image" onclick="imageBig(this)" src="auworld/images/jadeja.jpeg">
+          </span>
+        </div></div>
+      </div>
+    </div>
+  </aside>
+</div>
