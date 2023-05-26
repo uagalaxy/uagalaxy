@@ -58,7 +58,7 @@ postMenu.forEach((menu) => {
 
 
 function cardMenu(au) {
-  const card = au.parentElement.parentElement;
+  const card = au.parentElement;
   let linkName = card.querySelector(".au-card-img").getAttribute("title");
   let linkUrl =  card.querySelector(".au-card-img").getAttribute("src");
 
