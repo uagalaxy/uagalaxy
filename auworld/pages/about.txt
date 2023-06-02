@@ -60,52 +60,6 @@
         <p style="text-align: center;border-top: 2px solid;padding: 5px;margin: 15px 0 0px;">The most loved people/thing
           which bring smile on my face</p>
         <div class="au-favs-item-list">
-        <div class="favs-item" li-index="1">
-          <span class="favs-detail">
-            <p class="favs-title">MS Dhoni😍</p>
-            <p class="favs-about">I love Mahi(Dhoni).He is my all time favourite. He looks so cute, his cuteness, coolness always attract me</p>
-            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=ms dhoni">more</a>
-          </span>
-          <span class="favs-img-holder">
-            <img alt="ms dhoni" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/mahi.jpeg">
-          </span>
-        </div><div class="favs-item" li-index="2">
-          <span class="favs-detail">
-            <p class="favs-title">minions😘</p>
-            <p class="favs-about">I love minions. They are awesome, cute, attractive, cool...</p>
-            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=minions">more</a>
-          </span>
-          <span class="favs-img-holder">
-            <img alt="minions" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/minions.jpg">
-          </span>
-        </div><div class="favs-item" li-index="3">
-          <span class="favs-detail">
-            <p class="favs-title">Dilip sir😊</p>
-            <p class="favs-about">You Know this legend! This is not only reason of my smile, this legend is whole india's smile</p>
-            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=dilip joshi">more</a>
-          </span>
-          <span class="favs-img-holder">
-            <img alt="dilip joshi" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/dilip-sir.jpeg">
-          </span>
-        </div><div class="favs-item" li-index="4">
-          <span class="favs-detail">
-            <p class="favs-title">Hrithik Roshan🤩</p>
-            <p class="favs-about">the handsome one, this person have great personality😍. And the acting is...</p>
-            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=hrithik roshan">more</a>
-          </span>
-          <span class="favs-img-holder">
-            <img alt="hrithik roshan" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/hritik.jpeg">
-          </span>
-        </div><div class="favs-item" li-index="5">
-          <span class="favs-detail">
-            <p class="favs-title">sir jadeja😋</p>
-            <p class="favs-about">the handsome, sir ravindra jadeja always impress me by his tough catches for team. and the look he have😍</p>
-            <a class="favs-lm" target="_blank" href="https://www.google.com/search?q=ravindra jadeja">more</a>
-          </span>
-          <span class="favs-img-holder">
-            <img alt="ravindra jadeja" class="favs-img image" onclick="imageBig(this)" src="../auworld/images/jadeja.jpeg">
-          </span>
-        </div></div>
       </div>
     </div>
   </aside>
