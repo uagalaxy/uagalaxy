@@ -121,7 +121,7 @@ function getdata(){
       for(let[key,value] of Object.entries(data)){
         posts_div.innerHTML="<div class='col-sm-4 mt-2 mb-1'>"+
         "<div class='card'>"+
-        "<img src='"+value.imageURL+"' style='height:250px;'>"+
+        "<embed autoplay='off' src='"+value.imageURL+"' style='height:250px;'>"+
         "<div class='card-body'><p class='card-text'>"+value.posttitleau+"</p>"+
         "<button class='btn btn-danger' id='"+key+"' onclick='delete_post(this.id)'>Delete</button>"+
         "</div></div></div>"+posts_div.innerHTML;
