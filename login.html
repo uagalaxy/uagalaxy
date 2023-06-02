@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="auworld/css/theme.css">
+    <link rel="stylesheet" href="auworld/css/app.css" />
+</head>
+<body>
+ <input type="checkbox" id="toggleinup" class="hide">
+ <div class="login-page">
+     <div class="signup">
+         <label for="toggleinup" class="toggle-btn"></label>
+         <p class="userhis">welcome to AUworld!</p>
+         <form>
+             <input id="upname" name="name" placeholder="your name" type="text" autocomplete="on">
+             <input id="profilelink" placeholder="your profile picture link" type="url">
+             <input id="upemail" placeholder="email" type="emil" autocomplete="on" >
+             <input id="uppassword" placeholder="password" type="password" autocomplete="on" minlength="6" maxlength="99">
+             <button onclick="signUp()" type="submit"> signup</button>
+         </form>
+     </div>
+     <div class="signin">
+         <label for="toggleinup" class="toggle-btn-in"></label>
+         <p class="userhis">welcome back</p>
+         <form>
+             <input id="inemail" type="email" placeholder="email" autocomplete="off" >
+             <input id="inpassword" type="password" placeholder="password" autocomplete="off" >
+             <button onclick="login()" type="submit">login</button>
+         </form>
+     </div>
+ </div>
+<div class="setting">
+  <label for="setting" class="setoff" style="margin:20px 0px 0px 10px;display: flex;align-items: center;"><svg width="20" height="20" viewBox="0 0 512 512"><path d="M48,256c0,114.87,93.13,208,208,208s208-93.13,208-208S370.87,48,256,48,48,141.13,48,256Zm224-80.09L208.42,240H358v32H208.42L272,336.09,249.3,358.63,147.46,256,249.3,153.37Z" style="fill: white;"></path></svg><p style="margin:0 0 0 10px;font-size: larger;">setting</p></label>
+  <ul class="setme">
+    <li>
+    <button class="btn btn-danger"  onclick="logout()">Logout</button>
+  </li>
+</ul>
+</div>
+<div class="error">
+    <div class="error-box">
+    <h2>ERROR</h1>
+    <span id="error">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, molestias?</span>
+    <button class="close-error" onclick="document.querySelector('.error').style.display = 'none';">Close</button>
+    </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script> 
+<script src="auworld/js/login.js"></script>
+</body>
+</html>
