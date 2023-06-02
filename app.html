@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auworld</title>
+    <link rel="stylesheet" href="auworld/css/app.css" />
+</head>
+<body>
+
+     <input type="checkbox" id="toggleinup" class="hide">
+ <input type="checkbox" name="choice" id="setting" class="hide">
+ <input type="checkbox" name="choice" id="goforpost" class="hide" checked>
+ <div id="app" class="app">
+    <div class="pages">
+        <div class="home-page">
+            <div class="au-header">
+          <label for="setting">
+            <svg width="20" height="20" viewBox="0 0 512 512"><circle cx="256" cy="256" r="48"></circle><path d="M470.39,300l-.47-.38-31.56-24.75a16.11,16.11,0,0,1-6.1-13.33l0-11.56a16,16,0,0,1,6.11-13.22L469.92,212l.47-.38a26.68,26.68,0,0,0,5.9-34.06l-42.71-73.9a1.59,1.59,0,0,1-.13-.22A26.86,26.86,0,0,0,401,92.14l-.35.13L363.55,107.2a15.94,15.94,0,0,1-14.47-1.29q-4.92-3.1-10-5.86a15.94,15.94,0,0,1-8.19-11.82L325.3,48.64l-.12-.72A27.22,27.22,0,0,0,298.76,26H213.24a26.92,26.92,0,0,0-26.45,22.39l-.09.56-5.57,39.67A16,16,0,0,1,173,100.44c-3.42,1.84-6.76,3.79-10,5.82a15.92,15.92,0,0,1-14.43,1.27l-37.13-15-.35-.14a26.87,26.87,0,0,0-32.48,11.34l-.13.22L35.71,177.9A26.71,26.71,0,0,0,41.61,212l.47.38,31.56,24.75a16.11,16.11,0,0,1,6.1,13.33l0,11.56a16,16,0,0,1-6.11,13.22L42.08,300l-.47.38a26.68,26.68,0,0,0-5.9,34.06l42.71,73.9a1.59,1.59,0,0,1,.13.22A26.86,26.86,0,0,0,111,419.86l.35-.13,37.07-14.93a15.94,15.94,0,0,1,14.47,1.29q4.92,3.11,10,5.86a15.94,15.94,0,0,1,8.19,11.82l5.56,39.59.12.72A27.22,27.22,0,0,0,213.24,486h85.52a26.92,26.92,0,0,0,26.45-22.39l.09-.56,5.57-39.67a16,16,0,0,1,8.18-11.82c3.42-1.84,6.76-3.79,10-5.82a15.92,15.92,0,0,1,14.43-1.27l37.13,14.95.35.14a26.85,26.85,0,0,0,32.48-11.34,2.53,2.53,0,0,1,.13-.22l42.71-73.89A26.7,26.7,0,0,0,470.39,300ZM335.91,259.76a80,80,0,1,1-83.66-83.67A80.21,80.21,0,0,1,335.91,259.76Z"></path></svg>
+          </label>
+            <a class="au-for-pre"><img src="auworld/img/post-dp.png" class="image" alt="au"></a>
+          </div>
+          <div id="posts"></div>
+        </div>
+        <div class="make-post">
+         <form id="post-form" class="make-post-fm">
+                     <input class="make-post-form" id="title" placeholder="post title...">
+                     <input class="make-post-form" id="keywords" placeholder="keywords">
+                     <input class="make-post-form" id="dataname" placeholder="dataname">
+                     <input class="make-post-form" id="id" disabled placeholder="id">
+                     <input class="make-post-form" id="id-2" disabled placeholder="id">
+                     <input class="make-post-form" id="uploaddate" disabled placeholder="date today" disabled>
+                     <textarea class="make-post-form text" id="about" placeholder="about"></textarea>
+					          <div id="container"><input type="file" id="image"></div>
+                     <div class="text-center">
+                        <button type="button" class="make-post-form-submit" onclick="upload()">Upload</button>
+                     </div>
+                 </form>
+         </div>
+    </div>
+    
+<label for="goforpost" class="goforpost"></label>  
+</div>
+    <div class="setting">
+  <label for="setting" class="setoff" style="margin:20px 0px 0px 10px;display: flex;align-items: center;"><svg width="20" height="20" viewBox="0 0 512 512"><path d="M48,256c0,114.87,93.13,208,208,208s208-93.13,208-208S370.87,48,256,48,48,141.13,48,256Zm224-80.09L208.42,240H358v32H208.42L272,336.09,249.3,358.63,147.46,256,249.3,153.37Z" style="fill: white;"></path></svg><p style="margin:0 0 0 10px;font-size: larger;">setting</p></label>
+  <ul class="setme">
+    <li>
+    <button class="btn btn-danger"  onclick="logout()">Logout</button>
+  </li>
+<h6 id="user"></h6>
+</ul>
+</div>
+<div class="error">
+    <div class="error-box">
+    <h2>ERROR</h1>
+    <span id="error"></span>
+    <button class="close-error" onclick="document.querySelector('.error').style.display = 'none';">Close</button>
+    </div>
+</div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+    <script src="auworld/js/app.js"></script>
+</body>
+</html>
