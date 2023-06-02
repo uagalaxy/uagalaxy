@@ -1,6 +1,6 @@
 <div class="contact">
   <form class="contact-fm" action="https://formsubmit.co/c133e40e14339e711bb386f7bed75d5c" method="POST">
-    <input type="hidden" name="_next" value="https://auworld.netlify.app/AUworlD/page/thankyou.html">
+    <input type="hidden" name="_next" value="https://uagalaxy.web.app/thanks.html">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="kauno ke msg">
     <p class="contact-detail">please fill correct information<br>*your message will directly deliver to me.</p>
