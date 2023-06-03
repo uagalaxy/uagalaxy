@@ -340,6 +340,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.querySelector("#home-feature").insertAdjacentHTML("beforeend", liTag);
         ;}
     </script>
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('auworld/js/sw.js')
+  }
+</script>
+
 <script src="auworld/js/functions.js"></script>
 <script src="auworld/js/list.min.js"></script>
 <script src="auworld/js/particles.min.js" ></script>
