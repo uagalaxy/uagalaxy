@@ -15,12 +15,13 @@ self.addEventListener("message", (event) => {
   }
 });
 
-self.addEventListener('install', event => {
-    event.waitUntil((async () => {
-        const cache = await caches.open(CACHE);
-        cache.addAll(offlineFallbackPage);
-    })());
+self.addEventListener('install', async (event) => {
+  event.waitUntil(
+    caches.open(CACHE)
+      .then((cache) => cache.addAll(offlineFallbackPage))
+  );
 });
+
 
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
