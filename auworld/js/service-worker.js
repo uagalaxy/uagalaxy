@@ -19,7 +19,17 @@ self.addEventListener('install', async (event) => {
       .then((cache) => cache.add(offlineFallbackPage))
   );
 });
+const PRECACHE_ASSETS = [
+    '/auworld/'
+]
 
+// Listener for the install event - pre-caches our assets list on service worker install.
+self.addEventListener('install', event => {
+    event.waitUntil((async () => {
+        const cache = await caches.open(CACHE_NAME);
+        cache.addAll(PRECACHE_ASSETS);
+    })());
+});
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
 }
@@ -82,26 +92,58 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-self.addEventListener('periodicsync', (event) => {
-  if (event.tag === 'content-sync') {
-    event.waitUntil(
-      (async () => {
-        // Sync new data in the background and store it.
-        const lastUpdated = await updateContent();
-        const backgroundSyncCache = await caches.open (
-          'periodic-background-sync'
-        );
-        backgroundSyncCache.put('/last-updated', new Response(lastUpdated));
+const registerPeriodicBackgroundSync = async (registration) => {
+  const status = await navigator.permissions.query({
+    name: 'periodic-background-sync',
+  });
+  if (status.state === 'granted' && 'periodicSync' in registration) {
+    try {
+      // Register the periodic background sync.
+      await registration.periodicSync.register('content-sync', {
+        // An interval of one day.
+        minInterval: 24 * 60 * 60 * 1000,
+      });
+      available.hidden = false;
+      notAvailable.hidden = true;
 
-        // Notify potentially running clients, so they can update.
-        self.clients.matchAll().then((clientList) => {
-          for (const client of clientList) {
-            client.postMessage({
-              tag: event.tag,
-            });
-          }
-        });
-      })()
-    );
+      // List registered periodic background sync tags.
+      const tags = await registration.periodicSync.getTags();
+      if (tags.length) {
+        ul.innerHTML = '';
+      }
+      tags.forEach((tag) => {
+        const li = document.createElement('li');
+        li.textContent = tag;
+        ul.append(li);
+      });
+
+      // Update the user interface with the last periodic background sync data.
+      const backgroundSyncCache = await caches.open('periodic-background-sync');
+      if (backgroundSyncCache) {
+        const backgroundSyncResponse =
+          backgroundSyncCache.match('/last-updated');
+        if (backgroundSyncResponse) {
+          lastUpdated.textContent = `${await fetch('/last-updated').then(
+            (response) => response.text()
+          )} (periodic background-sync)`;
+        }
+      }
+
+      // Listen for incoming periodic background sync messages.
+      navigator.serviceWorker.addEventListener('message', async (event) => {
+        if (event.data.tag === 'content-sync') {
+          lastUpdated.textContent = `${await updateContent()} (periodic background sync)`;
+        }
+      });
+    } catch (err) {
+      console.error(err.name, err.message);
+      available.hidden = true;
+      notAvailable.hidden = false;
+      lastUpdated.textContent = 'Never';
+    }
+  } else {
+    available.hidden = true;
+    notAvailable.hidden = false;
+    lastUpdated.textContent = `${await updateContent()} (manual)`;
   }
-}); 
+};
