@@ -12,23 +12,15 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
-
-self.addEventListener('install', async (event) => {
-  event.waitUntil(
-    caches.open(CACHE)
-      .then((cache) => cache.add(offlineFallbackPage))
-  );
-});
 const PRECACHE_ASSETS = [
     '/auworld/'
 ]
-
-// Listener for the install event - pre-caches our assets list on service worker install.
-self.addEventListener('install', event => {
-    event.waitUntil((async () => {
-        const cache = await caches.open(CACHE_NAME);
-        cache.addAll(PRECACHE_ASSETS);
-    })());
+self.addEventListener('install', async (event) => {
+  event.waitUntil(
+    caches.open(CACHE)
+      .then((cache) => cache.add(offlineFallbackPage));
+          cache.addAll(PRECACHE_ASSETS);
+  );
 });
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
