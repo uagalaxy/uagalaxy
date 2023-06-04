@@ -12,14 +12,13 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
-self.addEventListener('install', async (event) => {
-  event.waitUntil(
-    caches.open(CACHE)
-      .then((cache) => cache.add(offlineFallbackPage));
-      .then((cache) => cache.add(assest);
-  );
-});
 
+self.addEventListener('install', event => {
+    event.waitUntil((async () => {
+        const cache = await caches.open(CACHE);
+        cache.addAll(PRECACHE_ASSETS);
+    })());
+});
 
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
