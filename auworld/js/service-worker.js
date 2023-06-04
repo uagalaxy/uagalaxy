@@ -24,25 +24,7 @@ const offlineFallbackPage = [
 '/auworld/js/app.js',
 '/auworld/js/cursor.js',
 '/auworld/js/data.js',
- '/auworld/img/favicon.png',
-'/auworld/img/feature-about.png',
-'/auworld/img/feature-contact.png',
-'/auworld/img/feature-post.png',
-'/auworld/img/minions.jpg',
-'/auworld/img/minions1.jpg',
-'/auworld/img/minions2.jpg',
-'/auworld/img/post-dp.png',
-'/auworld/img/au.png',
-        '/auworld/font/ua.ttf',
-'/auworld/font/uaworld.TTF',
-'/auworld/images/dilip-sir.jpeg',
-'/auworld/images/homepage.png',
-'/auworld/images/hritik.jpeg',
-'/auworld/images/jadeja.jpeg',
-'/auworld/images/mahi.jpeg',
-'/auworld/images/minions.jpg',
-'/auworld/pages/about.txt',
-'/auworld/pages/contact.txt'
+ 
 ]
 
 self.addEventListener("message", (event) => {
