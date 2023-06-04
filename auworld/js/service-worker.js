@@ -112,3 +112,15 @@ self.addEventListener('periodicsync', (event) => {
     );
   }
 });
+
+const registerPeriodicBackgroundSync = async (registration) => {
+  const status = await navigator.permissions.query({
+    name: 'periodic-background-sync',
+  });
+  if (status.state === 'granted' && 'periodicSync' in registration) {
+    try {
+      // Register the periodic background sync.
+      await registration.periodicSync.register('content-sync', {
+        // An interval of one day.
+        minInterval: 24 * 60 * 60 * 1000,
+      });
