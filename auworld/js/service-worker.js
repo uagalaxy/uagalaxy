@@ -3,7 +3,9 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
 const CACHE = "uagalaxy";
-
+const PRECACHE_ASSETS = [
+    '/auworld/'
+]
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
 const offlineFallbackPage = "/index.html";
 
@@ -12,16 +14,15 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
-const PRECACHE_ASSETS = [
-    '/auworld/'
-]
+
 self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
       .then((cache) => cache.add(offlineFallbackPage));
-          cache.addAll(PRECACHE_ASSETS);
+         cache.addAll(PRECACHE_ASSETS);
   );
 });
+
 if (workbox.navigationPreload.isSupported()) {
   workbox.navigationPreload.enable();
 }
