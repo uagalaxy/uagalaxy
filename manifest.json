@@ -10,6 +10,7 @@
 "theme_color": "#b5dfff",
 "background_color": "#b5dfff",
 "scope": "/",
+ "id": "./",
 "start_url": "/",
 "orientation": "any",
 "icons": [
