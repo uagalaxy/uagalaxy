@@ -16,7 +16,7 @@ self.addEventListener("message", (event) => {
 self.addEventListener('install', event => {
     event.waitUntil((async () => {
         const cache = await caches.open(CACHE);
-        cache.addAll(PRECACHE_ASSETS);
+        cache.addAll(assest);
     })());
 });
 
