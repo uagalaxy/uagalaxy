@@ -4,8 +4,10 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 
 const CACHE = "uagalaxy";
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "/index.html";
-const assest='/auworld/';
+const offlineFallbackPage = [
+    '/index.html',
+    '/auworld/'
+]
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
@@ -16,7 +18,7 @@ self.addEventListener("message", (event) => {
 self.addEventListener('install', event => {
     event.waitUntil((async () => {
         const cache = await caches.open(CACHE);
-        cache.addAll(assest);
+        cache.addAll(offlineFallbackPage);
     })());
 });
 
