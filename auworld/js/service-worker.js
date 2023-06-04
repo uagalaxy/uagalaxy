@@ -18,8 +18,10 @@
     */
 // This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
 
-const CACHE = "pwabuilder-offline-page";
-
+const CACHE = "uagalaxy";
+const PRECACHE_ASSETS = [
+    '/auworld/'
+]
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
@@ -30,11 +32,11 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
-
 self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
-      .then((cache) => cache.add(offlineFallbackPage))
+      .then((cache) => cache.add(offlineFallbackPage));
+      cache.addAll(PRECACHE_ASSETS);
   );
 });
 
@@ -70,6 +72,15 @@ self.addEventListener('fetch', (event) => {
     })());
   }
 });
+
+const status = await navigator.permissions.query({
+  name: 'periodic-background-sync',
+});
+if (status.state === 'granted') {
+  // Periodic background sync can be used.
+} else {
+  // Periodic background sync cannot be used.
+}
     const HOSTNAME_WHITELIST = [
         self.location.hostname,
         'fonts.gstatic.com',
