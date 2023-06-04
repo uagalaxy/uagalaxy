@@ -17,7 +17,12 @@
         "src": "auworld/icons/icon-72x72.png",
         "sizes": "72x72",
         "type": "image/png",
-        "purpose": "any maskable"
+        "purpose": "maskable"
+      },{
+        "src": "auworld/icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "any"
       },
       {
         "src": "auworld/icons/icon-96x96.png",
