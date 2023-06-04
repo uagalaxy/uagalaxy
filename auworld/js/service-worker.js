@@ -42,7 +42,7 @@ const offlineFallbackPage = [
 '/auworld/images/mahi.jpeg',
 '/auworld/images/minions.jpg',
 '/auworld/pages/about.txt',
-'/auworld/pages/contact.txt',
+'/auworld/pages/contact.txt'
 ]
 
 self.addEventListener("message", (event) => {
