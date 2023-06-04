@@ -65,8 +65,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <style id="user-custom-style"></style>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="uagalaxy" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="" />
-  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="" /> 
+<script>navigator.serviceWorker.register("auworld/js/service-worker.js")</script> 
+<link rel="manifest" href="manifest.json" />
 </head>
 <body class="light-theme">
   <!-- Google Tag Manager (noscript) -->
@@ -340,11 +341,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.querySelector("#home-feature").insertAdjacentHTML("beforeend", liTag);
         ;}
     </script>
-<script>
-  if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('auworld/js/sw.js')
-  }
-</script>
 
 <script src="auworld/js/functions.js"></script>
 <script src="auworld/js/list.min.js"></script>

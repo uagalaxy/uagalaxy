@@ -3,19 +3,21 @@
 "protocol_handlers": [{"protocol":"mailto","url":"/newEmail?to=%s"}], 
 "name": "uagalaxy",
 "short_name": "uagalaxy",
-"start_url": "/",
 "display": "standalone",
 "description": "uagalaxy, watch enjoy",
 "lang": "en",
 "dir": "auto",
 "theme_color": "#b5dfff",
 "background_color": "#b5dfff",
+"scope": "/",
+"start_url": "/",
 "orientation": "any",
 "icons": [
     {
         "src": "auworld/icons/icon-72x72.png",
         "sizes": "72x72",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any maskable"
       },
       {
         "src": "auworld/icons/icon-96x96.png",
