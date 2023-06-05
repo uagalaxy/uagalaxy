@@ -20,6 +20,7 @@
         </p>
       </div>
       <!-- some social links to show off -->
+      
       <ul class="profile-social-links in-pu in-pua">
         <li class="prolink">
           <a style="background:radial-gradient(circle at top right, orange,crimson,blue);" target="self" href="https://www.instagram.com/uagalaxy">
@@ -56,7 +57,26 @@
           </a>
         </li>
       </ul>
-   
+   <div class="mobileShow"> <script type="text/javascript">
+	atOptions = {
+		'key' : 'ae000364e8511e64c35f25ab098a8024',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://tinyplywood.com/ae000364e8511e64c35f25ab098a8024/invoke.js"></scr' + 'ipt>');
+</script> </div>
+<div class="mobileHide"> <script type="text/javascript">
+	atOptions = {
+		'key' : 'b930693ecf63e314c93adca462287a2a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://tinyplywood.com/b930693ecf63e314c93adca462287a2a/invoke.js"></scr' + 'ipt>');
+</script> </div>
       <div style="display: flex;flex-direction: column;align-items: center;">
         <p style="text-align: center;border-top: 2px solid;padding: 5px;margin: 15px 0 0px;">The most loved people/thing
           which bring smile on my face</p>
