@@ -56,14 +56,5 @@
     }
 
   </script>
-  <script type="text/javascript">
-	atOptions = {
-		'key' : 'ae000364e8511e64c35f25ab098a8024',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/ae000364e8511e64c35f25ab098a8024/invoke.js"></scr' + 'ipt>');
-</script>
+  
 </div>
