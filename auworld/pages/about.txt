@@ -56,6 +56,16 @@
           </a>
         </li>
       </ul>
+      <script type="text/javascript">
+	atOptions = {
+		'key' : 'ae000364e8511e64c35f25ab098a8024',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/ae000364e8511e64c35f25ab098a8024/invoke.js"></scr' + 'ipt>');
+</script>
       <div style="display: flex;flex-direction: column;align-items: center;">
         <p style="text-align: center;border-top: 2px solid;padding: 5px;margin: 15px 0 0px;">The most loved people/thing
           which bring smile on my face</p>
@@ -606,7 +616,17 @@
           <span class="favs-img-holder">
             <img alt="${allfavs[i].link_lm}" class="favs-img image" onclick="imageBig(this)" src="${allfavs[i].img}">
           </span>
-        </div>`;
+        </div>
+        <script type="text/javascript">
+	atOptions = {
+		'key' : 'ae000364e8511e64c35f25ab098a8024',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/ae000364e8511e64c35f25ab098a8024/invoke.js"></scr' + 'ipt>');
+</script>`;
     ulTag.insertAdjacentHTML("beforeend", liTag);
   }
   content.onclick = () => {
