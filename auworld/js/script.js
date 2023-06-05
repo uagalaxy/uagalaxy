@@ -185,13 +185,11 @@ window.addEventListener("click",function(){
 if (document.getElementById("for-tab-3").hasAttribute("checked")) {
     $("#loadcontact").load('auworld/pages/contact.txt');
     tabContactBtn.removeAttribute("onclick")
-} else {
-}
+} else {}
 if (document.getElementById("for-tab-4").hasAttribute("checked")) {
     $("#loadabout").load('auworld/pages/about.txt');
     tabAboutBtn.removeAttribute("onclick")
 } else {
-    tabContact.innerHTML = "";
 }
 content.onclick =()=>{
     document.querySelector("#setting").checked = false;
