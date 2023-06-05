@@ -50,13 +50,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="auworld/css/theme.css">
     <link rel="stylesheet" href="auworld/css/style.css">
     <link rel="stylesheet" href="auworld/css/responsive.css">
+	<style type="text/css">
+  .mobileShow {display: none;}
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){ 
+      .mobileShow {display: inline;}
+  }
+  .mobileHide { display: inline; }
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){
+     .mobileHide { display: none;}
+  }
+</style>
     <style id="user-custom-style"></style>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="uagalaxy" />
   <meta name="apple-mobile-web-app-status-bar-style" content="" /> 
 <script>navigator.serviceWorker.register("auworld/js/service-worker.js")</script> 
 <link rel="manifest" href="manifest.json" />
-	<script type='text/javascript' src='//tinyplywood.com/5c/6a/93/5c6a93e46577f2c2576e448c3ed4c270.js'></script>
 </head>
 <body class="light-theme">
 <!-- Google Tag Manager (noscript) -->
@@ -100,7 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <img class="home-img" src="auworld/img/minions2.jpg" alt="home image">
   </main>
-<script type="text/javascript">
+<div class="mobileHide"> <script type="text/javascript">
 	atOptions = {
 		'key' : 'ae000364e8511e64c35f25ab098a8024',
 		'format' : 'iframe',
@@ -109,7 +126,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		'params' : {}
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://tinyplywood.com/ae000364e8511e64c35f25ab098a8024/invoke.js"></scr' + 'ipt>');
-</script>
+</script> </div>
+<div class="mobileHide"> <script type="text/javascript">
+	atOptions = {
+		'key' : 'b930693ecf63e314c93adca462287a2a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://tinyplywood.com/b930693ecf63e314c93adca462287a2a/invoke.js"></scr' + 'ipt>');
+</script> </div>
   <section class="home-section" id="home-section">
     <div class="fake-search hide">
       <center>
@@ -132,7 +159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!------------------------------------------------------------------------------------------------------->
     <div class="au-page  people-list" id="tab-posts" data-page="2">
       <div class="search">
-	      <script type="text/javascript">
+	     <div class="mobileHide"> <script type="text/javascript">
 	atOptions = {
 		'key' : 'ae000364e8511e64c35f25ab098a8024',
 		'format' : 'iframe',
@@ -141,7 +168,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		'params' : {}
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://tinyplywood.com/ae000364e8511e64c35f25ab098a8024/invoke.js"></scr' + 'ipt>');
-</script>
+</script> </div>
+<div class="mobileHide"> <script type="text/javascript">
+	atOptions = {
+		'key' : 'b930693ecf63e314c93adca462287a2a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://tinyplywood.com/b930693ecf63e314c93adca462287a2a/invoke.js"></scr' + 'ipt>');
+</script> </div>
         <div class="fool">
           <input id="ua-search-box" type="text" placeholder="search...">
             <div class="autocom-box"></div>
