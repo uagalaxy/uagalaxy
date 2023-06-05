@@ -280,6 +280,9 @@ ul.main-tabs li {
 /*-----------------------------------------------------------------------------------*/
 #tab-posts{
   padding-bottom: calc(11vh + 30px);
+	display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .au-postcard.show {
     animation: show 0.4s ease;
