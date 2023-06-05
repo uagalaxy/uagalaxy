@@ -183,13 +183,13 @@ window.addEventListener("click",function(){
 })
 
 if (document.getElementById("for-tab-3").hasAttribute("checked")) {
-    $(tabContact).load('auworld/pages/contact.txt');
+    $("#loadcontact").load('auworld/pages/contact.txt');
     tabContactBtn.removeAttribute("onclick")
 } else {
     tabContact.innerHTML = "";
 }
 if (document.getElementById("for-tab-4").hasAttribute("checked")) {
-    $(tabAbout).load('auworld/pages/about.txt');
+    $("#loadabout").load('auworld/pages/about.txt');
     tabAboutBtn.removeAttribute("onclick")
 } else {
     tabContact.innerHTML = "";
