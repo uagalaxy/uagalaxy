@@ -186,7 +186,27 @@ if (document.getElementById("for-tab-3").hasAttribute("checked")) {
     $("#loadcontact").load('auworld/pages/contact.txt');
     tabContactBtn.removeAttribute("onclick")
 } else {
-    tabContact.innerHTML = "";
+    tabContact.innerHTML = `<div id="loadcontact"></div>
+		  <div class="mobileShow"> <script type="text/javascript">
+	atOptions = {
+		'key' : 'ae000364e8511e64c35f25ab098a8024',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://tinyplywood.com/ae000364e8511e64c35f25ab098a8024/invoke.js"></scr' + 'ipt>');
+</script> </div>
+<div class="mobileHide"> <script type="text/javascript">
+	atOptions = {
+		'key' : 'b930693ecf63e314c93adca462287a2a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://tinyplywood.com/b930693ecf63e314c93adca462287a2a/invoke.js"></scr' + 'ipt>');
+</script> </div>`;
 }
 if (document.getElementById("for-tab-4").hasAttribute("checked")) {
     $("#loadabout").load('auworld/pages/about.txt');
