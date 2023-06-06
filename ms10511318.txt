@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "uagalaxy.netlify.com",
+  "Id": "044e3eca-fe49-4853-a50d-5b2cd05cca35"
+}
