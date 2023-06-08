@@ -60,8 +60,8 @@ postMenu.forEach((menu) => {
  document.querySelector("#post").addEventListener("click", function (event) {
 	if(contextMenu.classList.contains("menu-open")){
 	     contextMenu.classList.remove("menu-open");
+	     document.querySelector("#post").removeAttribute("onclick");
 	    }else{
-		setTimeout( document.querySelector("#post").removeAttribute("onclick") , 1000);
      }
    
 });
