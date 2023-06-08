@@ -61,7 +61,7 @@ function hideABC(l){
 	if(contextMenu.classList.contains("menu-open")){
 	     contextMenu.classList.remove("menu-open");
 	    }else{
-      l.removeAttribute("onclick");
+      document.querySelector("#post").removeAttribute("onclick");
      }
    
 });
