@@ -70,7 +70,7 @@ function cardMenu(au) {
   const card = au.parentElement.parentElement;
   let linkName = card.querySelector(".au-card-img").getAttribute("title");
   let linkUrl =  card.querySelector(".au-card-img").getAttribute("src");
-  document.querySelector("#post").setAttribute("onclick", "hideABC()");
+  document.querySelector("#post").setAttribute("onclick", "await hideABC()");
   document.getElementById("share").setAttribute("data-name", linkName);
   document.getElementById("share").setAttribute("data-url", linkUrl);
   document.getElementById("copy").setAttribute("data-text", linkUrl);
