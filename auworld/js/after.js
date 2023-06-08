@@ -61,7 +61,7 @@ postMenu.forEach((menu) => {
 	if(contextMenu.classList.contains("menu-open")){
 	     contextMenu.classList.remove("menu-open");
 	    }else{
-		 document.querySelector("#post").removeAttribute("onclick")
+		setTimeout( document.querySelector("#post").removeAttribute("onclick") , 1000);
      }
    
 });
