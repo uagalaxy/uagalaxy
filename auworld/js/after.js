@@ -56,7 +56,7 @@ postMenu.forEach((menu) => {
   menu.setAttribute("onclick", "cardMenu(this)");
 });
 
-function hideABC(l){
+await function hideABC(l){
  document.querySelector("#post").addEventListener("click", function (event) {
 	if(contextMenu.classList.contains("menu-open")){
 	     contextMenu.classList.remove("menu-open");
@@ -70,7 +70,7 @@ function cardMenu(au) {
   const card = au.parentElement.parentElement;
   let linkName = card.querySelector(".au-card-img").getAttribute("title");
   let linkUrl =  card.querySelector(".au-card-img").getAttribute("src");
-  document.querySelector("#post").setAttribute("onclick", "await hideABC()");
+  document.querySelector("#post").setAttribute("onclick", "hideABC()");
   document.getElementById("share").setAttribute("data-name", linkName);
   document.getElementById("share").setAttribute("data-url", linkUrl);
   document.getElementById("copy").setAttribute("data-text", linkUrl);
