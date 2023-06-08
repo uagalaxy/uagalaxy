@@ -113,7 +113,7 @@ function getdata(){
         "</div>"+
     "</div>"+
 	 "<div class='au-card-img-holder animated-bg'>"+ 
-		 "<embed class='au-card-img image' onclick='imageBig(this)' autoplay='off' title='"+ value.posttitleau+"' src='"+value.imageURL+"' alt='"+ value.posttitleau+"'>"+ 
+		 "<embed class='au-card-img image' onclick='imageBig(this)' autoplay='0' autostart='0' title='"+ value.posttitleau+"' src='"+value.imageURL+"' alt='"+ value.posttitleau+"'>"+ 
 	 "</div>"+ 
 	 "<div class='au-card-content'>"+ 
 		 "<div class='au-post-about'>"+ 
