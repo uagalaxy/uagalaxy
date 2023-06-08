@@ -75,7 +75,9 @@ mainTabs.addEventListener("click", function (event) {
     if (!event.target.id) return;
     update(event.target.id);
 });
-
+document.querySelector("#post").addEventListener("click", function (event) {
+   contextMenu.classList.toggle("menu-open");
+});
 const update = (tabId) => {
     // remove the active class of the previously selected tab
     const currentTab = mainTabs.querySelector(".active");
