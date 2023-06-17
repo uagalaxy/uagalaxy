@@ -1,6 +1,6 @@
     
 <div class="contact">
-  <form class="contact-fm" method="POST" netlify>
+  <form action="https://formsubmit.co/c133e40e14339e711bb386f7bed75d5c"  class="contact-fm" method="POST" netlify>
     <input type="hidden" name="_next" value="https://uagalaxy.netlify.app/thanks.html">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_subject" value="kauno ke msg">
