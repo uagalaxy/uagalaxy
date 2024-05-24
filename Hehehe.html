@@ -1,1 +1,28 @@
-<audio controls src="./VID.m4a"></audio>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Player</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    audio {
+      width: 300px; /* Adjust width as needed */
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <audio controls>
+    <source src="./VID.m4a" controls >
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
