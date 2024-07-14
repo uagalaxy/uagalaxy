@@ -115,10 +115,51 @@
     backdrop-filter:blur(5px);
     padding: 10px  0;
     }
-    
+    #loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.runner {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-image: url('runner.gif');
+  background-size: cover;
+  animation: run 2s linear infinite;
+}
+
+.loading-text {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+#content {
+  display: none;
+}
     </style>
 </head>
 <body oncontextmenu="return false;" >
+<div id="loading-page">
+  <div class="runner"></div>
+  <div class="loading-text">Loading: <span id="loading-percentage">0%</span></div>
+</div>
+<div id="content">
    <a href="https://uagalaxy.netlify.app"><img class="ua" src="ua.gif" alt="uagalaxy"></a>
     <div class="container">
         <div class="profile-pic">
@@ -151,12 +192,27 @@
         <input required class="intxt"name="msg" type="text" placeholder="say hello" />
         <input  required class="intxt m"name="cnt" type="text" placeholder="Id,📞,📧 " />
         <button type="submit" class="btn"><span class="fas fa-paper-plane"></span></button>
-        <input type="hidden" name="_next" value="">
+        <input type="hidden" name="_next" value="https://uagalaxy.netlify.app/thanks">
              <input type="hidden" name="_captcha" value="false">
              <input type="hidden" name="_subject" value="kauno ke msg">
       </form>
    <span class="uu">&lt;/&gt; with <span class="fas fa-heart"></span> by <a class="herftome" href="https://uagalaxy.netlify.app" title="uagalaxy web link">uagalaxy</a></span>
-   </div><script>
+   </div></div><script>
+       let loadingPercentage = 0;
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadingPercentage = 50;
+  document.getElementById("loading-percentage").innerText = `${loadingPercentage}%`;
+});
+
+window.addEventListener("load", () => {
+  loadingPercentage = 100;
+  document.getElementById("loading-percentage").innerText = `${loadingPercentage}%`;
+  document.getElementById("loading-page").style.display = "none";
+  document.getElementById("content").style.display = "block";
+});
+
+
  setInterval( function() {const startDate = new Date('2007-01-17T15:22:00Z');
 const endDate = new Date();
 const differenceInMilliseconds = endDate.getTime() - startDate.getTime();
@@ -170,7 +226,8 @@ const seconds = Math.floor((differenceInMilliseconds % (1000 * 60)) / 1000);
      
 document.querySelector ('#count').textContent = `${years}y ${months}m ${days}d ${hours}h ${minutes}m ${seconds}s`},1000);
    
-  
+
+
     </script>
 </body>
 </html>
