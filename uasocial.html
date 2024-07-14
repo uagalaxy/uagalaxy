@@ -123,6 +123,7 @@
   height: 100%;
   background-color: black;
   z-index: 1000;
+  display:block;    text-align:center 
 }
 
 .runner {
@@ -138,7 +139,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-top: 20px;
-    
+  
 }
 
 @keyframes run {
@@ -199,20 +200,23 @@
       </form>
    <span class="uu">&lt;/&gt; with <span class="fas fa-heart"></span> by <a class="herftome" href="https://uagalaxy.netlify.app" title="uagalaxy web link">uagalaxy</a></span>
    </div></div><script>
-       let loadingPercentage = 0;
+       
+let loadingPercentage = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadingPercentage = 50;
+  loadingPercentage = 10;
   document.getElementById("loading-percentage").innerText = `${loadingPercentage}%`;
 });
 
-window.addEventListener("load", () => {
-  loadingPercentage = 100;
+let interval = setInterval(() => {
+  loadingPercentage += 1;
   document.getElementById("loading-percentage").innerText = `${loadingPercentage}%`;
-  document.getElementById("loading-page").style.display = "none";
-  document.getElementById("content").style.display = "block";
-});
-
+  if (loadingPercentage >= 100) {
+    clearInterval(interval);
+    document.getElementById("loading-page").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  }
+}, 10);
 
  setInterval( function() {const startDate = new Date('2007-01-17T15:22:00Z');
 const endDate = new Date();
