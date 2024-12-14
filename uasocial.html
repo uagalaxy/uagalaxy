@@ -14,9 +14,15 @@
             -webkit-user-select: none
             -ms-user-select: none;
             user-select: none;
-           
-            
+            }
+          input:focus,textarea:focus{
+              border:none;
+              box-shadow:none;
+              outline:none;
+              background:rgba(255,255,255,0.3);
              }
+            
+  
         .ua{
             width:40px;
             border-radius:50%;
@@ -45,7 +51,7 @@
             object-fit: cover;
         }
         .social-icons{
-            width:100%;
+            width:auto;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -76,27 +82,22 @@
            width:100%;
            text-align:center; 
            display:block
-         }
-         .message-input {
+         } 
+.message-input {
   display: flex;
   padding: 0px;
-  margin:10px;
-  
-  background:transparent;
-  border-radius:2rem;
-  border:1px solid white;
-  
+  margin:0px;
+  flex-direction:column;
+  background:transparent; 
 }
-
-.message-input .intxt {
-  width: 100%;
-  padding: 5px;
-  border-radius:2rem;
-  border:0px solid ;
-  background:transparent;
-  
+.intxt{
+    background:transparent;
+    padding:5px;
+    height:auto;    
+    border-radius:5px;
+    border-bottom:solid white
 }
-.m{
+.me{
     width:40% !important;
     margin:0px;
     border-width: 1px !important;
@@ -105,17 +106,24 @@
 }
 
 .message-input .btn {
-  color: white; 
+  color: black; 
   margin:5px 10px 5px 5px;
   font-size:20px;
+  background:white;
+  padding:2px 10px;
+  width:120px;
+  border-radius:20px;
+  text-align:center;
 }
 .aa{
-    position:;
-    bottom:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
     backdrop-filter:blur(5px);
-    padding: 10px  0;
+    padding: 10px;
     }
-    #loading-page {
+#loading-page {
   position: fixed;
   top: 0;
   left: 0;
@@ -123,7 +131,7 @@
   height: 100%;
   background-color: black;
   z-index: 1000;
-  display:block;    text-align:center 
+  display: block;    text-align:center 
 }
 
 .runner {
@@ -176,6 +184,57 @@
 @keyframes l24{
   100%{background-position: left}
 }
+#popup-btn {
+	background-color: white;
+	color: #000;
+	height:40px;
+	padding:0 20px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+#popup-btn:hover {
+	background-color: #ddd;
+}
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1;
+ justify-content:center;
+ align-items:center;
+}
+
+.popup-content {
+	background-color: rgba(0,0,0,0.5);
+	backdrop-filter:blur(4px);
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	border-radius:20px;
+}
+
+.close {
+	color: #fff;
+	float: right;
+	margin:5px;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
     </style>
 </head>
 <body oncontextmenu="return false;" >
@@ -211,17 +270,28 @@
             <a href="https://instagram.com/uagalaxy" class="fab fa-instagram"></a>
             <a href="https://uagalaxy.netlify.app" class="fas fa-earth"></a>
             <a href="mailto:maakasamindian@gmail.com" class="fas fa-envelope"></a>
-        </div>
-    <form class="message-input" action="https://formsubmit.co/c133e40e14339e711bb386f7bed75d5c" method="POST">
-        <input required class="intxt"name="msg" type="text" placeholder="say hello" />
-        <input  required class="intxt m"name="cnt" type="text" placeholder="Id,📞,📧 " />
-        <button type="submit" class="btn"><span class="fas fa-paper-plane"></span></button>
+        </div><hr style="width:2px;height:40px;margin:0 10px;border:none;background:white">
+      <button id="popup-btn">Say hello!</button></div>
+   <span class="uu">&lt;/&gt; with <span class="fas fa-heart"></span> by <a class="herftome" href="https://uagalaxy.netlify.app" title="uagalaxy web link">uagalaxy</a></span>
+   
+   <div id="popup" class="popup">
+		<div class="popup-content">
+			<span class="close">&times;</span>
+			<form class="message-input" action="https://formsubmit.co/c133e40e14339e711bb386f7bed75d5c" method="POST">
+        <label for="name">Name:</label>
+				   <input required class="intxt" type="text" id="name" name="name" placeholder="your good name"><br>
+			    	<label for="contact">Contact:</label>
+				   <input required class="intxt" type="text" id="contact" placeholder="Mail/Instagram/PhoneNo./Fb" name="contact"><br>
+				   <label for="message">Message:</label>
+			    	<textarea id="message" class="intxt" required name="message" placeholder="say hello"></textarea><br>
+        <center><button type="submit" class="btn"> Send <span class="fas fa-paper-plane"></span></button></center>
         <input type="hidden" name="_next" value="https://uagalaxy.netlify.app/thanks">
              <input type="hidden" name="_captcha" value="false">
              <input type="hidden" name="_subject" value="kauno ke msg">
       </form>
-   <span class="uu">&lt;/&gt; with <span class="fas fa-heart"></span> by <a class="herftome" href="https://uagalaxy.netlify.app" title="uagalaxy web link">uagalaxy</a></span>
-   </div></div><script>
+		</div>
+	</div>
+<script>
        
 let loadingPercentage = 0;
 
@@ -254,6 +324,21 @@ const seconds = Math.floor((differenceInMilliseconds % (1000 * 60)) / 1000);
 document.querySelector ('#count').textContent = `${years}y ${months}m ${days}d ${hours}h ${minutes}m ${seconds}s`},1000);
    
 
+		var popupBtn = document.getElementById("popup-btn");
+
+		var popup = document.getElementById("popup");
+		var closeBtn = document.getElementsByClassName("close")[0];
+		popupBtn.onclick = function() {
+			popup.style.display = "flex";
+		}
+		closeBtn.onclick = function() {
+			popup.style.display = "none";
+		}
+		window.onclick = function(event) {
+			if (event.target == popup) {
+				popup.style.display = "none";
+			}
+		}
 
     </script>
 </body>
